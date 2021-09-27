@@ -32,10 +32,3 @@ const rectangle = new Rectangle(20, 20)
 const circle = new Circle(2)
 console.log(areaCalculator.computeArea(rectangle))
 console.log(areaCalculator.computeArea(circle))
-
-// console.log(area.computeArea({
-//   radius: 10,
-//   type: 'CIRCLE'
-// }))
-
-
