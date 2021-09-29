@@ -5,7 +5,7 @@ interface Band {
   playMusic: () => void
 }
 
-class JazzBand implements Band {
+export class JazzBand implements Band {
   private _name = "JazzMeUp"
 
   get name() {
@@ -17,7 +17,7 @@ class JazzBand implements Band {
   }
 }
 
-class ElectronicBand implements Band {
+export class ElectronicBand implements Band {
   private _name = "Electricity"
 
   get name() {
@@ -31,7 +31,7 @@ class ElectronicBand implements Band {
 
 type Mood = 'classy' | 'focus' | 'dance'
 
-class BandFactory {
+export class BandFactory {
   createBand(mood: Mood) {
     let band: Band;
     if (mood === 'classy') {
@@ -46,7 +46,7 @@ class BandFactory {
   }
 }
 
-class MusicClient {
+export class MusicClient {
   playMusic(mood: Mood) {
     const bandFactory = new BandFactory()
     const band = bandFactory.createBand(mood)
@@ -56,4 +56,3 @@ class MusicClient {
 
 const musicClient = new MusicClient();
 musicClient.playMusic('classy')
-

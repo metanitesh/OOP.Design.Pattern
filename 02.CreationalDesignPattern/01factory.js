@@ -1,4 +1,4 @@
-class JazzBand {
+export class JazzBand {
     constructor() {
         this._name = "JazzMeUp";
     }
@@ -9,7 +9,7 @@ class JazzBand {
         return console.log("Jazz music");
     }
 }
-class ElectronicBand {
+export class ElectronicBand {
     constructor() {
         this._name = "Electricity";
     }
@@ -20,7 +20,7 @@ class ElectronicBand {
         return console.log("Boom Boom music");
     }
 }
-class BandFactory {
+export class BandFactory {
     createBand(mood) {
         let band;
         if (mood === 'classy') {
@@ -32,7 +32,7 @@ class BandFactory {
         return band;
     }
 }
-class MusicClient {
+export class MusicClient {
     playMusic(mood) {
         const bandFactory = new BandFactory();
         const band = bandFactory.createBand(mood);
