@@ -1,31 +1,31 @@
 // An order for a ticket to a concert
-interface Order {
+export interface Order {
   userId: String
   payment: PaymentInformation
   concert: Concert
 }
 
 // A user's payment information
-interface PaymentInformation {
+export interface PaymentInformation {
   creditCardNumber: String
   // ...other fields
 }
 
 // A concert
-interface Concert {
+export interface Concert {
   id: String
   // ...other fields
 }
 
 // A class for interacting with different concerts
-class ConcertManager {
+export class ConcertManager {
 }
 
 // A class for processing payments
-class PaymentProcessor {
+export class PaymentProcessor {
 }
 
-class OrderFacade {
+export class OrderFacade {
   constructor(private paymentProcessor: PaymentInformation, private concertManager: ConcertManager) {
 
   }
